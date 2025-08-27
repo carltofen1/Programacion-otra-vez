@@ -99,10 +99,3 @@ Thumbs.db
 
 ---
 
-Si quieres, puedo:
-
-* Crear la estructura de carpetas inicial con ejemplos mínimos (un `main.py` y un `index.html`).
-* Añadir un `.gitignore` en el repo.
-* Generar plantillas `README.md` para `python/` y `js/`.
-
-Dime cuál opción prefieres y lo preparo.
