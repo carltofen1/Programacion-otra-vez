@@ -1,0 +1,70 @@
+// 1. Mensaje de bienvenida
+console.log("¡Bienvenido a mi programa en JavaScript!");
+
+// 2. Variable con tu nombre y mensaje en consola
+let nombre = "Pico";
+console.log(`¡Hola, ${nombre}!`);
+
+// 3. Variable con tu nombre y mensaje en alert
+let nombre2 = "Pico";
+alert(`¡Hola, ${nombre2}!`);
+
+// 4. Preguntar lenguaje favorito
+let lenguajeFav = prompt("¿Cuál es el lenguaje de programación que más te gusta?");
+console.log("Tu lenguaje favorito es:", lenguajeFav);
+
+// 5. Suma de dos valores
+let valor1 = 8;
+let valor2 = 12;
+let resultadoSuma = valor1 + valor2;
+console.log(`La suma de ${valor1} y ${valor2} es igual a ${resultadoSuma}.`);
+
+// 6. Resta de dos valores
+let valor1R = 50;
+let valor2R = 23;
+let resultadoResta = valor1R - valor2R;
+console.log(`La diferencia entre ${valor1R} y ${valor2R} es igual a ${resultadoResta}.`);
+
+// 7. Verificar mayoría de edad
+let edad = parseInt(prompt("Ingresa tu edad:"));
+if (edad >= 18) {
+    console.log("Eres mayor de edad.");
+} else {
+    console.log("Eres menor de edad.");
+}
+
+// 8. Verificar si número es positivo, negativo o cero
+let numero = parseFloat(prompt("Ingresa un número:"));
+if (numero > 0) {
+    console.log("El número es positivo.");
+} else if (numero < 0) {
+    console.log("El número es negativo.");
+} else {
+    console.log("El número es cero.");
+}
+
+// 9. Números del 1 al 10 con while
+let contador = 1;
+while (contador <= 10) {
+    console.log(contador);
+    contador++;
+}
+
+// 10. Verificar nota
+let nota = 6.8;
+if (nota >= 7) {
+    console.log("Aprobado");
+} else {
+    console.log("Reprobado");
+}
+
+// 11. Número aleatorio (cualquier valor)
+console.log("Número aleatorio:", Math.random());
+
+// 12. Número entero entre 1 y 10
+let aleatorio1a10 = Math.floor(Math.random() * 10) + 1;
+console.log("Número entero entre 1 y 10:", aleatorio1a10);
+
+// 13. Número entero entre 1 y 1000
+let aleatorio1a1000 = Math.floor(Math.random() * 1000) + 1;
+console.log("Número entero entre 1 y 1000:", aleatorio1a1000);
