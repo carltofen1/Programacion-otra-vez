@@ -31,7 +31,7 @@ body {
     gap: 80px;
 }
 .header_menú_botón{
-    font-size: 24px;
+    font-size: 1.5rem;
     font-family: var(--fuente-montserrat);
     font-weight: 600;
     color: var(--color-terciario);
@@ -43,10 +43,10 @@ body {
     align-items: center;
     padding: 6% 10%;
     justify-content: space-between;
+    gap: 82px;
 }
 .contenido_presentación{
-    max-width: 615px;
-    width: 100%;
+    width: 50%;
     display: flex;
     flex-direction: column;
     gap: 40px;
@@ -55,11 +55,11 @@ body {
     color: var(--color-terciario);
 }
 .presentación_contenido_título{
-    font-size: 36px;
+    font-size: 2.25rem;
     font-family: var(--fuente-krona) ;
 }
 .presentación_contenido_párrafo{
-    font-size: 24px;
+    font-size: 1.5rem;
     font-family:var(--fuente-montserrat);
 }
 .presentación__enlaces{
@@ -70,12 +70,12 @@ body {
     align-items: center;
 }
 .presentación__enlaces_link{
-    width: 378px;
+    width: 50%;
     text-align: center;
     padding: 21.5px;
     border-radius: 8px;
     font-family: var(--fuente-montserrat);
-    font-size: 24px;
+    font-size: 1.5rem;
     font-weight: 600;
     text-decoration: none;
     color: var(--color-secundario);
@@ -85,14 +85,14 @@ body {
     gap: 10px;
 }
 .imagen{
-    width: 700px;
+    width: 50%;
     height: 550px;
     padding: 6%;
     border-radius: 160px;
 }
 .presentación__enlaces_subtítulo{
     font-family: var(--fuente-krona) ;
-    font-size: 24px;
+    font-size: 1.5rem;
     font-weight: 400;
 }
 .presentación__enlaces_link img {
@@ -105,10 +105,36 @@ body {
 }
 .footer{
     background-color: var(--color-terciario);
-    padding: 24px;
+    padding: 1.5rem;
     color: var(--color-primario);
     text-align: center;
     font-family: var(--fuente-montserrat);
-    font-size: 24px;
+    font-size: 1.5rem;
     font-weight: 400;
 }
+
+@media (max-width: 1200px){
+
+    
+    .header{
+        padding: 10% 0% 0% 0%;
+    }
+    .header_menú{
+        justify-content: center;
+    }
+    .presentación{
+        flex-direction: column-reverse;
+        padding: 5%;
+    }
+    .contenido_presentación{
+        width: auto;
+        height: auto;
+    }
+    .imagen{
+    width: 75%;
+    height: 75%;
+    padding: 6%;
+    border-radius: 10%;
+    }
+}
+    
