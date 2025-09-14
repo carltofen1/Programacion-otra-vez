@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+:root{
+    --color-primario:#000000;
+    --color-secundario:#F6F6F6;
+    --color-terciario:#22D4FD;
+    --color-gris: #272727;
+
+    --fuente-montserrat: "Montserrat", sans-serif;
+    --fuente-krona: "krona One","sans-serif" ;
+
+}
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+
+body {
+    background-color: var(--color-primario);
+    color: var(--color-secundario);
+    box-sizing: border-box;
+}
+.header{
+    padding: 2% 0% 0% 10% ;
+}
+.header_menú{
+    display: flex;
+    gap: 80px;
+}
+.header_menú_botón{
+    font-size: 24px;
+    font-family: var(--fuente-montserrat);
+    font-weight: 600;
+    color: var(--color-terciario);
+    text-decoration: none;
+    
+}
+.presentación{
+    display: flex;
+    align-items: center;
+    padding: 6% 10%;
+    justify-content: space-between;
+}
+.contenido_presentación{
+    max-width: 615px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+.destaco_título{
+    color: var(--color-terciario);
+}
+.presentación_contenido_título{
+    font-size: 36px;
+    font-family: var(--fuente-krona) ;
+}
+.presentación_contenido_párrafo{
+    font-size: 24px;
+    font-family:var(--fuente-montserrat);
+}
+.presentación__enlaces{
+    display: flex;
+    gap: 32px;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+}
+.presentación__enlaces_link{
+    width: 378px;
+    text-align: center;
+    padding: 21.5px;
+    border-radius: 8px;
+    font-family: var(--fuente-montserrat);
+    font-size: 24px;
+    font-weight: 600;
+    text-decoration: none;
+    color: var(--color-secundario);
+    border: 2px solid var(--color-terciario);
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+.imagen{
+    width: 700px;
+    height: 550px;
+    padding: 6%;
+    border-radius: 160px;
+}
+.presentación__enlaces_subtítulo{
+    font-family: var(--fuente-krona) ;
+    font-size: 24px;
+    font-weight: 400;
+}
+.presentación__enlaces_link img {
+    width: 32px;
+    height: 32px;
+    object-fit: contain;
+}
+.presentación__enlaces_link:hover{
+    background-color: var(--color-gris);
+}
+.footer{
+    background-color: var(--color-terciario);
+    padding: 24px;
+    color: var(--color-primario);
+    text-align: center;
+    font-family: var(--fuente-montserrat);
+    font-size: 24px;
+    font-weight: 400;
+}
