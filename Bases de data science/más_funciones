@@ -1,0 +1,92 @@
+import random
+from math import sqrt
+
+lista = [16, 14, 63, 65, 17, 99, 70, 11, 20, 48, 79, 32, 17, 89, 12, 25, 66]
+tamano = len(lista)
+mayor = max(lista)
+menor = min(lista)
+suma = sum(lista)
+print(f"La lista tiene {tamano} números, donde el mayor es {mayor} y el menor es {menor}. La suma de los valores es {suma}.")
+
+def tabla_multiplicar():
+    n = int(input("Ingresa un número entero: "))
+    print(f"Tabla del {n}:")
+    for i in range(11):
+        print(f"{n} x {i} = {n * i}")
+
+tabla_multiplicar()
+
+def multiplos_tres():
+    datos = [97, 80, 94, 88, 80, 1, 16, 53, 62, 32, 24, 99]
+    resultado = list(filter(lambda x: x % 3 == 0, datos))
+    print(resultado)
+
+multiplos_tres()
+
+numeros = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+cuadrados = list(map(lambda x: x**2, numeros))
+print(cuadrados)
+
+def calcular_puntuacion():
+    notas = []
+    for i in range(5):
+        nota = float(input(f"Ingrese la nota {i+1}: "))
+        notas.append(nota)
+    promedio = sum(notas) / len(notas)
+    print(f"Notas: {notas}")
+    print(f"Promedio: {promedio}")
+
+calcular_puntuacion()
+
+def analizar_notas():
+    notas = [float(input(f"Nota {i+1}: ")) for i in range(4)]
+    mayor = max(notas)
+    menor = min(notas)
+    media = sum(notas) / len(notas)
+    situacion = "Aprobado(a)" if media >= 11 else "Reprobado(a)"
+    print(f"El estudiante obtuvo una media de {media}, con la mayor nota de {mayor} puntos y la menor nota de {menor} puntos y fue {situacion}.")
+
+analizar_notas()
+
+nombres = ["juan", "MaRia", "JOSÉ"]
+apellidos = ["SILVA", "sosa", "Tavares"]
+completos = list(map(lambda n, a: n.capitalize() + " " + a.capitalize(), nombres, apellidos))
+print(completos)
+
+def calcula_puntos(goles_marcados, goles_recibidos):
+    puntos = 0
+    for marcados, recibidos in zip(goles_marcados, goles_recibidos):
+        if marcados > recibidos:
+            puntos += 3
+        elif marcados == recibidos:
+            puntos += 1
+    total_juegos = len(goles_marcados)
+    rendimiento = (puntos / (total_juegos * 3)) * 100
+    print(f"La puntuación del equipo fue {puntos} y su rendimiento fue {rendimiento:.2f}%")
+
+goles_marcados = [2, 1, 3, 1, 0]
+goles_recibidos = [1, 2, 2, 1, 3]
+calcula_puntos(goles_marcados, goles_recibidos)
+
+def gasto_hotel(dias):
+    return dias * 150
+
+def gasto_gasolina(distancia):
+    return (distancia * 2 / 14) * 5
+
+def gasto_paseo(dias, ciudad):
+    valores = {"Salvador": 200, "Fortaleza": 400, "Natal": 250, "Aracaju": 300}
+    return valores[ciudad] * dias
+
+def calcular_viaje(dias, ciudad):
+    distancias = {"Salvador": 850, "Fortaleza": 800, "Natal": 300, "Aracaju": 550}
+    total = gasto_hotel(dias) + gasto_gasolina(distancias[ciudad]) + gasto_paseo(dias, ciudad)
+    print(f"Con base en los gastos definidos, un viaje de {dias} días a {ciudad} desde Recife costaría {total:.2f} reales.")
+
+calcular_viaje(3, "Salvador")
+
+frase = "Aprender Python aquí en Alura es muy bueno"
+frase = frase.replace(",", " ").replace(".", " ").replace("!", " ").replace("?", " ")
+palabras = frase.split()
+largas = list(filter(lambda x: len(x) >= 5, palabras))
+print(largas)
