@@ -1,0 +1,48 @@
+alumnos = [
+    ["María", [15, 18, 14, 19]],
+    ["José", [12, 16, 17, 15]],
+    ["Lucía", [19, 19, 20, 18]],
+    ["Pedro", [10, 13, 11, 14]]
+]
+promedios = [(nombre, sum(notas)/len(notas)) for nombre, notas in alumnos]
+for nombre, promedio in promedios:
+    print(f"{nombre}: {promedio:.2f}")
+
+productos = [
+    ("Laptop", 25),
+    ("Mouse", 8),
+    ("Teclado", 4),
+    ("Monitor", 15),
+    ("USB", 2)
+]
+bajo_stock = [p for p in productos if p[1] < 10]
+print("Productos con stock bajo:", bajo_stock)
+
+empleados = [
+    ("Carla", 2800),
+    ("Jorge", 2200),
+    ("Miguel", 3100),
+    ("Diana", 2600)
+]
+ordenados = sorted(empleados, key=lambda e: e[1], reverse=True)
+print("Empleados por salario:", ordenados)
+
+ventas = [
+    ["Pan", [120, 130, 110, 150]],
+    ["Leche", [80, 95, 100, 105]],
+    ["Huevos", [200, 210, 190, 205]],
+    ["Café", [60, 70, 65, 75]]
+]
+totales = [(p[0], sum(p[1])) for p in ventas]
+print("Totales de ventas:", totales)
+
+peliculas = [
+    ("Inception", [9, 10, 8, 9]),
+    ("Interstellar", [10, 10, 9, 9]),
+    ("Avatar", [7, 8, 7, 6]),
+    ("Matrix", [10, 9, 10, 10])
+]
+ranking = sorted([(p[0], sum(p[1])/len(p[1])) for p in peliculas], key=lambda x: x[1], reverse=True)
+print("Ranking de películas:")
+for nombre, puntuacion in ranking:
+    print(f"{nombre}: {puntuacion:.2f}")
